@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College CGPA Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>🎓 College CGPA Calculator</h1>
+      <p class="sub">10-point grading scale · add semesters, subjects, credits and grades</p>
+    </header>
+
+    <section class="summary" aria-live="polite">
+      <div class="stat big">
+        <span class="label">CGPA</span>
+        <span class="value" id="cgpa">0.00</span>
+      </div>
+      <div class="stat">
+        <span class="label">Total credits</span>
+        <span class="value" id="total-credits">0</span>
+      </div>
+      <div class="stat">
+        <span class="label">Approx. %</span>
+        <span class="value" id="percentage">0.0</span>
+      </div>
+    </section>
+
+    <div id="semesters"></div>
+
+    <div class="actions">
+      <button id="add-sem" class="btn primary">+ Add semester</button>
+      <button id="reset" class="btn danger">Reset all</button>
+    </div>
+
+    <details class="scale">
+      <summary>Grade scale used</summary>
+      <table>
+        <thead><tr><th>Grade</th><th>O</th><th>A+</th><th>A</th><th>B+</th><th>B</th><th>C</th><th>P</th><th>F</th></tr></thead>
+        <tbody><tr><td>Points</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>0</td></tr></tbody>
+      </table>
+      <p class="note">
+        SGPA = Σ(credits × grade points) ÷ Σ credits. CGPA uses all semesters together.
+        Percentage uses the common CGPA × 9.5 formula; your university may use a different one.
+      </p>
+    </details>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
